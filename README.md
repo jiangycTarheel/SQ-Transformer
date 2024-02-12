@@ -6,16 +6,21 @@ by [Yichen Jiang](https://jiang-yichen.io), [Xiang Zhou](https://owenzx.github.i
 
 ![Image](./figures.png)
 ## 0 Installation
-This project is built on Python 3.6.8, pytorch 1.10.1 and fairseq 0.10.2. All dependencies can be installed via:
+* This project is built on Python 3.6.8, pytorch 1.10.1 and fairseq 0.10.2. All dependencies can be installed via:
 
 `pip install -r requirements.txt`
+
+* The vector quantization code `./ar_seq2seq/vector_quantization.py` is adapted from an older version of the [vector-quantize-pytorch](https://github.com/lucidrains/vector-quantize-pytorch) repo.
+* The main components of the model is implemented in `./ar_seq2seq`.
+* We also use some basic Transformer layer and modules from [Latent-Glat](https://github.com/baoy-nlp/Latent-GLAT) in `./nat`.
 
 ## 1 Running SQ-Transformer
 
 ### 1.1: Prepare Data
 * In this work, we use the [SCAN](https://github.com/brendenlake/SCAN), [COGS](https://github.com/najoungkim/COGS), [CoGnition](https://github.com/yafuly/CoGnition), 
 and WMT17 En-De, WMT14 En-Fr datasets to train and evaluate our models.
-
+* Since SCAN, COGS, and CoGnition do not have a validation set that require compositional generalization,
+we randomly select 20% examples from their test sets as the corresponding validation sets.
 * The processed data binaries of SCAN, COGS, and CoGnition can be downloaded at this [Google Drive](https://drive.google.com/file/d/1hh3zCmfObd_6E8rtPcPOsP3gLe73JR2G/view?usp=sharing).
 * Please follow [fairseq](https://github.com/facebookresearch/fairseq/blob/main/examples/translation/README.md) official 
 documentation to process the WMT data.
