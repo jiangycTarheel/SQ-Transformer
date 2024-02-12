@@ -26,7 +26,7 @@ python3 train.py ${DATA_BIN} \
     --data-name ${DATA_NAME} \
     --enc-lamda 0.999 \
     --lamda 0.999 \
-    --latent-use "no_use_input_inference&output" \
+    --latent-use "input_inference&predict_output" \
     --enc-output-vq-l1-factor 0.5 \
     --enc-output-vq-l2-factor 0.1 \
     --dec-output-vq-l1-factor 0.5 \
@@ -37,7 +37,7 @@ python3 train.py ${DATA_BIN} \
     --encoder-attn-v 'encoder_out' \
     --weight-decay 0.1 \
     --vq-encoder \
-    --enc-latent-use 'no_use_input&output' \
+    --enc-latent-use 'input&predict_output' \
     --enc-vq-input 'prev_vq_target_straightthru' \
     --left-pad-source 'False' \
     --vq-enc-l2-factor 0.1 \
@@ -51,7 +51,6 @@ python3 train.py ${DATA_BIN} \
     --vq-maximize-z-entropy-factor 0.1 \
     --vq-xentropy-factor 0.1 \
     --latent-factor 0 \
-    --forward-z-type 'v1' \
     --num-codes ${NUM_CODES} \
     --task seq2seq-translation \
     --block-cls highway \

@@ -1,7 +1,7 @@
-# [SQ-Transformer: Inducing Systematicity in Transformers by Attending to Structurally Quantized Embeddings]()
+# [SQ-Transformer: Inducing Systematicity in Transformers by Attending to Structurally Quantized Embeddings](https://arxiv.org/abs/2402.06492)
 <hr>
 
-This repo host the code for the paper [Inducing Systematicity in Transformers by Attending to Structurally Quantized Embeddings](), 
+This repo host the code for the paper [Inducing Systematicity in Transformers by Attending to Structurally Quantized Embeddings](https://arxiv.org/abs/2402.06492), 
 by [Yichen Jiang](https://jiang-yichen.io), [Xiang Zhou](https://owenzx.github.io/), and [Mohit Bansal](https://www.cs.unc.edu/~mbansal/).
 
 ![Image](./figures.png)
@@ -119,7 +119,7 @@ SQ-Transformer/
 @article{jiang2024SQTransformer,
   title={Inducing Systematicity in Transformers by Attending to Structurally Quantized Embeddings},
   author={Jiang, Yichen and Zhou, Xiang and Bansal, Mohit},
-  journal={},
+  journal={arXiv preprint arXiv:2402.06492},
   year={2024}
 }
 ```
